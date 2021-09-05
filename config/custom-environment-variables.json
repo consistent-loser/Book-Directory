@@ -1,3 +1,4 @@
 {
-    "jwtPrivateKey": "Book-Directory_jwtPrivateKey" 
+    "jwtPrivateKey": "Book-Directory_jwtPrivateKey" ,
+    "db": "Book-Directory_db"
 }
