@@ -12,5 +12,5 @@ require('./startup/prod')(app);
 //-----------------------------------------Establish Server----------------------------------------------//
 //-------------------------------------------------------------------------------------------------------//
 const port = 3000;
-app.listen(pocess.env.PORT||port, () => winston.log('info',`Listening to Port ${port}`));
+app.listen(process.env.PORT||port, () => winston.log('info',`Listening to Port ${port}`));
 
