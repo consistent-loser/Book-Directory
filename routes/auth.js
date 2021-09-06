@@ -13,7 +13,8 @@ router.post('/', asyncMiddleware(async (req,res) => {
     const {error} = validate(req.body);
 
     if(error){
-        return res.status(400).send(`Bad request ${error.message}`);
+
+        return res.status(400).send(`Bad request ${error.message} ${req.body.email}`);
     }
 
     const details = await user.findOne({email: req.body.email});
