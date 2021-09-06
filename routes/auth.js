@@ -29,7 +29,7 @@ router.post('/', asyncMiddleware(async (req,res) => {
        return res.status(400).send("Invalid username or password password");
     }
 
-    const token = jwt.sign({id: details._id},config.get('jwtPrivateKey'));
+    const token = jwt.sign({id: details._id},process.env.jwtPrivateKey);//config.get('jwtPrivateKey'));
 
     res.send(token);
 }));

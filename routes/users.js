@@ -36,7 +36,7 @@ router.post('/', asyncMiddleware(async (req,res) => {
 
     await User.save();
 
-    const token = jwt.sign({id: User._id}, config.get('jwtPrivateKey'));
+    const token = jwt.sign({id: User._id},process.env.jwtPrivateKey); // config.get('jwtPrivateKey'));
     res.header('x-auth-token', token).send(User);
 }));
 
